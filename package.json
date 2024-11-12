@@ -1,0 +1,27 @@
+{
+  "name": "serato2rekordbox",
+  "module": "src/cli.ts",
+  "type": "module",
+  "scripts": {
+    "cli": "bun src/cli.ts",
+    "build": "bunx esbuild ./src/cli.ts --bundle --format=esm --platform=node --outfile=./dist/serato2rekordbox.js",
+    "build-binary-darwin-arm64": "bun run build && bun build --compile --target=bun-darwin-arm64 --bytecode ./dist/serato2rekordbox.js --outfile ./dist/serato2rekordbox-darwin-arm64",
+    "build-binary-darwin-x64": "bun run build && bun build --compile --target=bun-darwin-x64 --bytecode ./dist/serato2rekordbox.js --outfile ./dist/serato2rekordbox-darwin-x64"
+  },
+  "bin": {
+    "serato2rekordbox": "src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/xml2js": "^0.4.14",
+    "esbuild": "^0.24.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "music-metadata": "^10.6.0",
+    "xml2js": "^0.6.2"
+  }
+}
