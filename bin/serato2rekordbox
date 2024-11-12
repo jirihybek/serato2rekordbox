@@ -1,0 +1,4 @@
+#!/bin/sh
+
+SCRIPT_DIR=$(dirname $0)
+bun run $SCRIPT_DIR/../src/cli.ts $@

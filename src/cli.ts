@@ -12,6 +12,7 @@ import { parseTrackMetaData, type TrackMetaData } from './lib/trackMetaDataParse
 import { exportToRecordboxXml, RecordboxPlaylistType, type RecordboxFolder, type RecordboxPlaylist } from './lib/rekordboxExporter';
 
 program
+    .name('serato2rekordbox')
     .argument('serato_dir', 'Path to the Serato directory')
     .argument('xml_path', 'Where to save Rekordbox XML file')
     .option(

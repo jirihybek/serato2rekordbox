@@ -27,13 +27,13 @@ To run the utility:
 ```bash
 bun run src/cli.ts <serato_dir> <output_xml_path>
 # or
-serato2rekordbox <serato_dir> <output_xml_path>
+./bin/serato2rekordbox <serato_dir> <output_xml_path>
 
 # Example:
-serato2rekordbox ~/Music/_Serato_ ~/Music/rekordbox.xml
+./bin/serato2rekordbox ~/Music/_Serato_ ~/Music/rekordbox.xml
 
 # To show all options:
-serato2rekordbox --help
+./bin/serato2rekordbox --help
 ```
 
 ## Development
